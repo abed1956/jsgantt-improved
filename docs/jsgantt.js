@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.JSGantt = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.JSGantt = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var jsGantt = require("./src/jsgantt");
@@ -1718,6 +1718,79 @@ var fr = {
     'qtrs': 'tri'
 };
 exports.fr = fr;
+var it = {
+    'january': 'Gennaio',
+    'february': 'Febbraio',
+    'march': 'Marzo',
+    'april': 'Aprile',
+    'maylong': 'Maggio',
+    'june': 'Giugno',
+    'july': 'Luglio',
+    'august': 'Agosto',
+    'september': 'Settembre',
+    'october': 'Ottobre',
+    'november': 'Novembre',
+    'december': 'Dicembre',
+    'jan': 'Gen',
+    'feb': 'Feb',
+    'mar': 'Mar',
+    'apr': 'Apr',
+    'may': 'Mag',
+    'jun': 'Giu',
+    'jul': 'Lug',
+    'aug': 'Ago',
+    'sep': 'Set',
+    'oct': 'Ott',
+    'nov': 'Nov',
+    'dec': 'Dic',
+    'sunday': 'Domenica',
+    'monday': 'Lunedì',
+    'tuesday': 'Martedì',
+    'wednesday': 'Mercoledì',
+    'thursday': 'Giovedì',
+    'friday': 'Venerdì',
+    'saturday': 'Sabato',
+    'sun': 'Dom',
+    'mon': 'Lun',
+    'tue': 'Mar',
+    'wed': 'Mer',
+    'thu': 'Gio',
+    'fri': 'Ven',
+    'sat': 'Sab',
+    'resource': 'Risorsa',
+    'duration': 'Durata',
+    'comp': '% Compl.',
+    'completion': 'Completamento',
+    'startdate': 'Data Inizio',
+    'planstartdate': 'Data Inizio Pianificata',
+    'enddate': 'Data Fine',
+    'planenddate': 'Data Fine Pianificata',
+    'cost': 'Costo',
+    'moreinfo': 'Più Informazioni',
+    'notes': 'Note',
+    'format': 'Formato',
+    'hour': 'Ora',
+    'day': 'Giorno',
+    'week': 'Settimana',
+    'month': 'Mese',
+    'quarter': 'Trimestre',
+    'hours': 'Ore',
+    'days': 'Giorni',
+    'weeks': 'Settimane',
+    'months': 'Mesi',
+    'quarters': 'Trimestri',
+    'hr': 'Ora',
+    'dy': 'Gior',
+    'wk': 'Sett',
+    'mth': 'Mese',
+    'qtr': 'Trim',
+    'hrs': 'Ore',
+    'dys': 'Giorni',
+    'wks': 'Sett',
+    'mths': 'Mesi',
+    'qtrs': 'Trim'
+};
+exports.it = it;
 
 },{}],7:[function(require,module,exports){
 "use strict";
