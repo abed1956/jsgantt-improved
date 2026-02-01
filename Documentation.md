@@ -1,4 +1,12 @@
 
+# jsGantt-Improved Documentation #
+
+**Note**: This is documentation for **jsGantt-improved**, a Gantt chart library. If you're looking for the **canvas-gauges** library by Mykhailo Stadnyk, please visit:
+* GitHub: https://github.com/Mikhus/canvas-gauges
+* Website: https://canvas-gauges.com/
+
+---
+
 # Usage #
 
 Creating a basic Gantt Chart
