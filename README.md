@@ -106,11 +106,13 @@ g.Draw();
   * Load Gantt from XML and JSON
     * From external files (including experimental support for MS Project XML files)
     * From JavaScript Strings
-  * Support for Internationalization 
+  * Support for Internationalization (English, Spanish, German, Portuguese, Russian, French, Italian)
 
 ## Documentation
 
 See the [Documentation](./Documentation.md) wiki page or the included ``docs/index.html`` file for instructions on use.
+
+For Italian language documentation, see [Documentazione in Italiano](./Documentation.it.md).
 
 Project based on https://code.google.com/p/jsgantt/.
 
