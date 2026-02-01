@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSGantt - Esempio Italiano</title>
+    <link href="jsgantt.css" rel="stylesheet" type="text/css"/>
+    <script src="jsgantt.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Esempio JSGantt in Italiano</h1>
+    <p>Questo è un esempio di JSGantt Chart con l'interfaccia in italiano.</p>
+    
+    <div style="position:relative" class="gantt" id="GanttChartDIV"></div>
+
+    <script>
+        var g = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'day');
+        
+        g.setOptions({
+            vCaptionType: 'Complete',
+            vQuarterColWidth: 36,
+            vDateTaskDisplayFormat: 'day dd month yyyy',
+            vDayMajorDateDisplayFormat: 'mon yyyy - Week ww',
+            vWeekMinorDateDisplayFormat: 'dd mon',
+            vLang: 'it',  // Imposta la lingua italiana
+            vShowTaskInfoLink: 1,
+            vShowEndWeekDate: 0,
+            vUseSingleCell: 10000,
+            vFormatArr: ['Day', 'Week', 'Month', 'Quarter']
+        });
+
+        // Aggiungi alcune attività di esempio
+        g.AddTaskItemObject({
+            "pID": 1,
+            "pName": "Progetto Esempio",
+            "pStart": "",
+            "pEnd": "",
+            "pPlanStart": "",
+            "pPlanEnd": "",
+            "pClass": "ggroupblack",
+            "pLink": "",
+            "pMile": 0,
+            "pRes": "Team",
+            "pComp": 40,
+            "pGroup": 1,
+            "pParent": 0,
+            "pOpen": 1,
+            "pDepend": "",
+            "pCaption": "",
+            "pCost": 5000,
+            "pNotes": "Progetto principale"
+        });
+
+        g.AddTaskItemObject({
+            "pID": 2,
+            "pName": "Fase di Analisi",
+            "pStart": "2024-02-01",
+            "pEnd": "2024-02-15",
+            "pPlanStart": "2024-02-01",
+            "pPlanEnd": "2024-02-15",
+            "pClass": "gtaskblue",
+            "pLink": "",
+            "pMile": 0,
+            "pRes": "Mario Rossi",
+            "pComp": 100,
+            "pGroup": 0,
+            "pParent": 1,
+            "pOpen": 1,
+            "pDepend": "",
+            "pCaption": "",
+            "pCost": 1500,
+            "pNotes": "Analisi dei requisiti del progetto"
+        });
+
+        g.AddTaskItemObject({
+            "pID": 3,
+            "pName": "Fase di Sviluppo",
+            "pStart": "2024-02-16",
+            "pEnd": "2024-03-15",
+            "pPlanStart": "2024-02-16",
+            "pPlanEnd": "2024-03-15",
+            "pClass": "gtaskgreen",
+            "pLink": "",
+            "pMile": 0,
+            "pRes": "Luca Bianchi",
+            "pComp": 60,
+            "pGroup": 0,
+            "pParent": 1,
+            "pOpen": 1,
+            "pDepend": "2",
+            "pCaption": "",
+            "pCost": 2500,
+            "pNotes": "Implementazione delle funzionalità"
+        });
+
+        g.AddTaskItemObject({
+            "pID": 4,
+            "pName": "Fase di Test",
+            "pStart": "2024-03-16",
+            "pEnd": "2024-03-31",
+            "pPlanStart": "2024-03-16",
+            "pPlanEnd": "2024-03-31",
+            "pClass": "gtaskyellow",
+            "pLink": "",
+            "pMile": 0,
+            "pRes": "Anna Verdi",
+            "pComp": 20,
+            "pGroup": 0,
+            "pParent": 1,
+            "pOpen": 1,
+            "pDepend": "3",
+            "pCaption": "",
+            "pCost": 1000,
+            "pNotes": "Test e verifica del sistema"
+        });
+
+        g.AddTaskItemObject({
+            "pID": 5,
+            "pName": "Rilascio",
+            "pStart": "2024-04-01",
+            "pEnd": "2024-04-01",
+            "pPlanStart": "2024-04-01",
+            "pPlanEnd": "2024-04-01",
+            "pClass": "gmilestone",
+            "pLink": "",
+            "pMile": 1,
+            "pRes": "Team",
+            "pComp": 0,
+            "pGroup": 0,
+            "pParent": 1,
+            "pOpen": 1,
+            "pDepend": "4",
+            "pCaption": "",
+            "pCost": 0,
+            "pNotes": "Rilascio in produzione"
+        });
+
+        g.Draw();
+    </script>
+    
+    <div style="margin-top: 20px; padding: 15px; background-color: #f0f0f0; border-radius: 5px;">
+        <h2>Spiegazione dei Parametri</h2>
+        <p>I parametri principali utilizzati in questo esempio sono:</p>
+        <ul>
+            <li><strong>vLang: 'it'</strong> - Imposta la lingua dell'interfaccia in italiano</li>
+            <li><strong>vCaptionType</strong> - Controlla quale campo visualizzare come didascalia sulla barra delle attività</li>
+            <li><strong>vDateTaskDisplayFormat</strong> - Formato della data visualizzato nei tooltip</li>
+            <li><strong>vShowTaskInfoLink</strong> - Mostra/nascondi il link "Più Informazioni" nel tooltip</li>
+            <li><strong>vUseSingleCell</strong> - Soglia per l'ottimizzazione delle prestazioni su grafici grandi</li>
+            <li><strong>vFormatArr</strong> - Formati di visualizzazione disponibili (Giorno, Settimana, Mese, Trimestre)</li>
+        </ul>
+        
+        <h3>Parametri delle Attività (Task)</h3>
+        <ul>
+            <li><strong>pID</strong> - ID univoco dell'attività</li>
+            <li><strong>pName</strong> - Nome dell'attività</li>
+            <li><strong>pStart/pEnd</strong> - Date di inizio e fine</li>
+            <li><strong>pRes</strong> - Risorsa assegnata</li>
+            <li><strong>pComp</strong> - Percentuale di completamento (0-100)</li>
+            <li><strong>pGroup</strong> - Indica se è un gruppo (1) o attività normale (0)</li>
+            <li><strong>pParent</strong> - ID dell'attività padre</li>
+            <li><strong>pDepend</strong> - Dipendenze da altre attività</li>
+            <li><strong>pCost</strong> - Costo dell'attività</li>
+            <li><strong>pMile</strong> - Indica se è una milestone (1) o meno (0)</li>
+        </ul>
+        
+        <p>Per la documentazione completa in italiano, consultare <a href="./Documentation.it.md">Documentation.it.md</a></p>
+    </div>
+</body>
+</html>
