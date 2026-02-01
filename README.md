@@ -114,6 +114,15 @@ See the [Documentation](./Documentation.md) wiki page or the included ``docs/ind
 
 Project based on https://code.google.com/p/jsgantt/.
 
+## Looking for Canvas Gauges?
+
+If you're looking for the **canvas-gauges** library by Mykhailo Stadnyk, you can find it here:
+
+* **GitHub Repository**: https://github.com/Mikhus/canvas-gauges
+* **Official Website**: https://canvas-gauges.com/
+* **NPM Package**: `npm install canvas-gauges`
+
+**Note**: jsGantt-improved is a Gantt chart library, while canvas-gauges is a library for creating gauge/meter visualizations. They are separate projects with different purposes.
 
 ## Want to Collaborate?
 
