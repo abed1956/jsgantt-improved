@@ -491,7 +491,7 @@ const it = {
   'months': 'Mesi',
   'quarters': 'Trimestri',
   'hr': 'Ora',
-  'dy': 'Gio',
+  'dy': 'Gior',
   'wk': 'Sett',
   'mth': 'Mese',
   'qtr': 'Trim',
